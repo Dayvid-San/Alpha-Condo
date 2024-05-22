@@ -1,15 +1,14 @@
-import React from 'react';
 import Styles from '../page.module.scss';
 
 
-interface user {
+interface userConfig {
     name: string;
 }
 
-const HomePage: React.FC<user> = ({ name }) => {
+const HomePage = (config: userConfig) => {
     return (
         <div className={Styles.container}>
-            <h1>Olá {name}</h1>
+            <h1>Olá {config.name}</h1>
         </div>
     );
 };
